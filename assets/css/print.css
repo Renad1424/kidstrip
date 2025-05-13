@@ -1,0 +1,146 @@
+@media print {
+    /* إعداد حجم الصفحة */
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+  
+    /* الأساسيات */
+    html, body {
+      width: auto !important;
+      height: auto !important;
+      overflow: visible !important;
+      margin: 0;
+      padding: 0;
+      print-color-adjust: exact !important;
+      -webkit-print-color-adjust: exact !important;
+    }
+  
+    /* جعل كل العناصر ظاهرة */
+    section, header, footer, div, main, article {
+      display: block !important;
+      visibility: visible !important;
+      overflow: visible !important;
+      height: auto !important;
+      opacity: 1 !important;
+      transform: none !important;
+      position: static !important;
+      page-break-inside: avoid;
+    }
+  
+    /* عرض كل الشرائح في السلايدر */
+    .carousel,
+    .swiper,
+    .hero-carousel {
+      display: block !important;
+      height: auto !important;
+    }
+  
+    .carousel-item,
+    .swiper-slide {
+      display: block !important;
+      position: static !important;
+      opacity: 1 !important;
+      height: auto !important;
+      transform: none !important;
+    }
+  
+    /* إزالة الأنميشن والتنقل */
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  
+    /* عرض العناصر المخفية من Bootstrap أو JS */
+    .d-none,
+    [hidden],
+    .hidden,
+    .collapse:not(.show),
+    .tab-pane:not(.active) {
+      display: block !important;
+      visibility: visible !important;
+      height: auto !important;
+      opacity: 1 !important;
+    }
+  
+    /* فصل كل قسم في صفحة جديدة */
+    section, .section, .page-section {
+      page-break-before: always;
+      page-break-after: always;
+      break-inside: avoid;
+    }
+  }
+  
+    img, picture, svg {
+      max-width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+  
+    /* إذا الصور خلفيات */
+    .bg-image,
+    .hero,
+    [style*="background-image"] {
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+    }
+  
+    /* إصلاح الصور داخل سلايدرات أو أعمدة */
+    .carousel-item img,
+    .swiper-slide img {
+      width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+    }
+  
+  
+    header, .hero, .main-banner, .bg-cover, .intro-section {
+      height: auto !important;
+      min-height: unset !important;
+      max-height: 300px !important; /* عدلي الرقم حسب حاجتك */
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: top center !important;
+    }
+  
+    /* إذا كانت صورة داخل عنصر وليس كخلفية */
+    header img, .hero img {
+      width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+      max-height: 300px !important;
+    }
+    /* عطل القياسات الكبيرة للهيدر */
+    #hero, .hero, .intro, .main-banner {
+      height: auto !important;
+      min-height: unset !important;
+      max-height: none !important;
+      padding: 40px 20px !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: top center !important;
+    }
+  
+    /* إذا في صورة داخل الهيدر */
+    #hero img, .hero img, .intro img {
+      width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+      max-height: 300px !important;
+    }
+  
+    /* ضبط عام */
+    body {
+      overflow: visible !important;
+    }
+  
+    section {
+      page-break-before: always;
+      page-break-after: always;
+      break-inside: avoid;
+    }
